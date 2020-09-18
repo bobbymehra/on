@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GrocerySite.master" AutoEventWireup="true" CodeFile="OrderDetails.aspx.cs" Inherits="OrderHistory" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/GSADMIN.master" AutoEventWireup="true" CodeFile="OrderDetails.aspx.cs" Inherits="OrderHistory" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style type="text/css">
@@ -8,7 +8,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div style="float:left;width:100%" >
+   <div style="float:left;width:100%" >
         <fieldset class="fieldsetmain">
             <legend style="font-size: 16px;">ORDERED PRODUCT DETAILS
             </legend>
@@ -43,9 +43,7 @@
                         <tr>
                             <td><b>City :</b></td>
                             <td>
-                                <asp:Label ID="lblCity" runat="server" />
-                                <asp:Label ID="lblUserID" runat="server" Text="Label" Visible="False"></asp:Label>
-                            </td>
+                                <asp:Label ID="lblCity" runat="server" /></td>
                             
                         </tr>
                         <tr>
@@ -87,7 +85,7 @@
 
                         </EditItemTemplate>
                     </asp:TemplateField>
-                        
+                       
                           <asp:TemplateField HeaderText="Category">
                             <ItemTemplate>
                                 <asp:Label ID="lblCategory" runat="server" Text='<%# Eval("CategoryType") %>'></asp:Label>
@@ -95,7 +93,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Qty">
                             <ItemTemplate>
-                                <asp:Label ID="lblQty" runat="server" Text='<%# Eval("Qty") %>'></asp:Label> <asp:Label ID="lblUnit" runat="server" Text='<%# Eval("Unit") %>'></asp:Label>
+                                <asp:Label ID="lblQty" runat="server" Text='<%# Eval("Qty") %>'></asp:Label>  <asp:Label ID="lblUnit" runat="server" Text='<%# Eval("Unit") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
 
@@ -125,7 +123,7 @@
                     <SortedDescendingCellStyle BackColor="#CAC9C9" />
                     <SortedDescendingHeaderStyle BackColor="#000065" />
                 </asp:GridView>
-                  <div  id="divtotal" runat="server">
+                 <div  id="divtotal" runat="server">
                     <div style="float: right; width: 283px; margin-right: 150px; height: 16px;">
                         Grand Total :
                    $<asp:Label ID="lblGrandTotal" runat="server" Text='<%# Eval("GrandTotal") %>'></asp:Label>
@@ -136,4 +134,3 @@
         </fieldset>
     </div>
 </asp:Content>
-
